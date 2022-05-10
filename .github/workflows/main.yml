@@ -22,10 +22,11 @@ jobs:
     - name: npm 依赖安装
       run: |
         cd ./example/full-page
+        ls
         npm install
     - name: 打包
       run: |
-        cd ls
+        ls
         npm run build
     - name: 同步文件到服务器
       uses: garygrossgarten/github-action-scp@release

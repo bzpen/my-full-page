@@ -33,5 +33,5 @@ jobs:
         host: ${{secrets.HOST}}
         username: ${{secrets.USER}}
         password: ${{secrets.PASSWORD}}
-        local: "dist"
+        local: "./example/full-page/dist"
         remote: ${{ secrets.SERVER_PATH }}

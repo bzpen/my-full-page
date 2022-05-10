@@ -1,11 +1,8 @@
 {
   "name": "@kaito_kuroba/my-fullpage",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "fullPage 页面切换",
-  "main": "index.ts",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "main": "./src/index.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/3118659412/my-fullPage.git"
@@ -17,6 +14,9 @@
   },
   "homepage": "https://github.com/3118659412/my-fullPage#readme",
   "devDependencies": {
-    "typescript": "^4.6.3",
+    "typescript": "^4.6.3"
+  },
+  "dependencies": {
+    "@kaito_kuroba/my-fullpage": "^1.0.1"
   }
 }

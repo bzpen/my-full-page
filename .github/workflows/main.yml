@@ -1,0 +1,35 @@
+
+name: dev test the deployed
+
+on: 
+  push:
+    branches: [ main ]
+jobs: 
+  build:
+    # 操作系统选择
+    runs-on:  ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16.13.2]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Node.js ${{ matrix.node-version }} 运行测试
+      uses: actions/setup-node@v2
+      with: 
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    - name: npm 依赖安装
+      run: npm install
+    - name: 更改目录
+      run: cd ./example/full-page
+    - name: 打包
+      run: npm run build
+    - name: 同步文件到服务器
+      uses: garygrossgarten/github-action-scp@release
+      with: 
+        host: ${{secrets.HOST}}
+        username: ${{secrets.USER}}
+        password: ${{secrets.PASSWORD}}
+        local: "dist"
+        remote: ${{ secrets.SERVER_PATH }}

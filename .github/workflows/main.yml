@@ -20,16 +20,18 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - name: npm 依赖安装
-      run: npm install
-    - name: 更改目录
-      run: cd ./example/full-page
+      run: |
+        cd ./example/full-page
+        npm install
     - name: 打包
-      run: npm run build
+      run: |
+        cd ./example/full-page
+        npm run build
     - name: 同步文件到服务器
       uses: garygrossgarten/github-action-scp@release
       with: 
         host: ${{secrets.HOST}}
         username: ${{secrets.USER}}
         password: ${{secrets.PASSWORD}}
-        local: "dist"
+        local: "./example/full-page/dist"
         remote: ${{ secrets.SERVER_PATH }}

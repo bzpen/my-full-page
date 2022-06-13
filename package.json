@@ -1,6 +1,6 @@
 {
   "name": "@kaito_kuroba/my-fullpage",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "fullPage 页面切换",
   "main": "./src/index.ts",
   "repository": {

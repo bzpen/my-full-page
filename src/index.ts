@@ -1,5 +1,8 @@
-
-interface FullPageOptions {
+/**
+ * fullPage.js v0.0.1
+ * @author: kaito kuroda
+ */
+ interface FullPageOptions {
   allPage: HTMLDivElement
   pageChildren: Element[]
   // 页面模块元素

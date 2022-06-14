@@ -5,18 +5,18 @@
   "main": "./src/index.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/3118659412/my-fullPage.git"
+    "url": "git+https://github.com/bzpen/my-fullPage.git"
   },
   "author": "kaito huroba",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/3118659412/my-fullPage/issues"
+    "url": "https://github.com/bzpen/my-fullPage/issues"
   },
-  "homepage": "https://github.com/3118659412/my-fullPage#readme",
+  "homepage": "https://github.com/bzpen/my-fullPage#readme",
   "devDependencies": {
     "typescript": "^4.6.3"
   },
   "dependencies": {
-    "@kaito_kuroba/my-fullpage": "^1.0.1"
+    "@kaito_kuroba/my-fullpage": "^1.0.3"
   }
 }

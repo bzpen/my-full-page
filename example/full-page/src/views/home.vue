@@ -37,7 +37,8 @@ onMounted(() => {
 })
 
 function goto(index: number) {
-  fullPage.srcollToPage(0, index)
+  let page = fullPage.getPageIndex()
+  fullPage.srcollToPage(page, index)
   fullPage.setPageIndex(index)
 }
 </script>
